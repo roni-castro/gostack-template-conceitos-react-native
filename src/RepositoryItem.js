@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 export default RepositoryItem = ({ id, title, techs, likes, onLikePress }) => (
   <View style={styles.repositoryContainer}>
     <Text style={styles.repository}>{title}</Text>
-    {techs &&
+    {techs.length > 0 &&
       <View style={styles.techsContainer}>
         {techs.map((tech, index) =>
           <Text key={index} style={styles.tech}>
